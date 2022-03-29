@@ -13,7 +13,7 @@ export class FirebaseEmployeesService implements GetsAllEmployeeDtoPort {
 
   getAll(criterion: Partial<EmployeeDTO>): Observable<EmployeeDTO[]> {
     return this._client
-    .collection<EmployeeDTO>('employees')
+    .collection<EmployeeDTO>('pieniadz-employees-list')
     .valueChanges(({idField: 'id'}))
     .pipe(map((data: EmployeeDTO[]) => filterByCriterion(data, criterion)));
   }
