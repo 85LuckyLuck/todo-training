@@ -19,7 +19,7 @@ export class FirebaseEmployeesService implements GetsAllEmployeeDtoPort, AddsEmp
     .pipe(map((data: EmployeeDTO[]) => filterByCriterion(data, criterion)));
   }
 
-  add(employee: Partial<EmployeeDTO>): void {
-    this._client.collection('employees').add(employee);
+  add(createEmployee: Partial<EmployeeDTO>): void {
+    this._client.collection('pieniadz-employees-list').add(createEmployee);
   }
 }

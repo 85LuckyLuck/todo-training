@@ -1,4 +1,4 @@
-<form [formGroup]="createEmployee">
+<form [formGroup]="createEmployee" (ngSubmit)="onCreateEmployeeSubmited(createEmployee)" >
     <input type="text" formControlName="name" placeholder="Name">
     <input type="text" formControlName="bio" placeholder="Bio">
     <input type="text" formControlName="imageUrl" placeholder="Image Url">

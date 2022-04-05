@@ -6,7 +6,8 @@ import { ADDS_EMPLOYEE_DTO } from '../../../application/ports/secondary/adds-emp
 
 @NgModule({ imports: [AngularFirestoreModule],
   	declarations: [],
-  	providers: [FirebaseEmployeesService, { provide: GETS_ALL_EMPLOYEE_DTO, useExisting: FirebaseEmployeesService }, { provide: ADDS_EMPLOYEE_DTO, useExisting: FirebaseEmployeesService }],
+  	providers: [FirebaseEmployeesService, { provide: GETS_ALL_EMPLOYEE_DTO, useExisting: FirebaseEmployeesService }, 
+		{ provide: ADDS_EMPLOYEE_DTO, useExisting: FirebaseEmployeesService }],
   	exports: [] })
 export class FirebaseEmployeesServiceModule {
 }
