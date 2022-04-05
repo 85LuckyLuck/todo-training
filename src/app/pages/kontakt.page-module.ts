@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { KontaktPage } from './kontakt.page';
 import { ContactUsComponentModule } from '../../../projects/messages/src/lib/adapters/primary/ui/contact-us.component-module';
 import { TeamListComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/team-list.component-module';
+import { FirebaseMessagesServiceModule } from '@messages';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -13,7 +14,8 @@ import { TeamListComponentModule } from '../../../projects/team/src/lib/adapters
         }
       ]),
   ContactUsComponentModule,
-  TeamListComponentModule
+  TeamListComponentModule,
+  FirebaseMessagesServiceModule
 ],
   	declarations: [KontaktPage],
   	providers: [],
