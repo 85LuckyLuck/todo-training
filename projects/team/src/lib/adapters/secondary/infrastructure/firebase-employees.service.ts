@@ -26,7 +26,7 @@ export class FirebaseEmployeesService implements GetsAllEmployeeDtoPort, AddsEmp
 
   getOne(id: string): Observable<EmployeeDTO> {
     return this._client
-    .doc<EmployeeDTO>('employees/'+id)
+    .doc<EmployeeDTO>('pieniadz-employees-list/'+id)
     .valueChanges({idField: 'id'});
   }
 }

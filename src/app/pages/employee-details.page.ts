@@ -14,7 +14,6 @@ import { ActivatedRoute } from '@angular/router';
      })
 export class EmployeeDetailsPage  {
    
-    constructor(private _activateRoute:ActivatedRoute) {}
-name$= this._activateRoute.params;
+   
 
 }

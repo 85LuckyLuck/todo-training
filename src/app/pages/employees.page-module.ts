@@ -11,7 +11,7 @@ import { TeamListComponentModule } from '../../../projects/team/src/lib/adapters
           component: EmployeesPage,
         }
       ]),
-  TeamListComponentModule
+  TeamListComponentModule,
 ],
   	declarations: [EmployeesPage],
   	providers: [],

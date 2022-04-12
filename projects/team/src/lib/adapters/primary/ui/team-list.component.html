@@ -1,6 +1,6 @@
 <div class="card-group">
     <div class="card" *ngFor = " let employee of employees$ | async ">
-      <img [src]="employee.imageUrl" class="card-img-top" alt="..."width="400" height="500">
+      <img [routerLink]="'/pracownik/'+employee.id" [src]="employee.imageUrl" class="card-img-top" alt="..."width="400" height="500">
       <div class="card-body">
         <h5 class="card-title"><span style="color: red">{{employee.name}}</span></h5>
         <p class="card-text"><b>{{employee.bio}}</b></p>
@@ -8,4 +8,4 @@
       </div>
 
     </div>
-  </div>
+  </div><ul><li *ngFor="let item of employees$ | async">{{ item | json }}</li></ul>

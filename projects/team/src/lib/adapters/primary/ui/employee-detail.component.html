@@ -1,1 +1,28 @@
-<ul><li *ngFor="let item of employeesList$ | async">{{ item | json }}</li></ul>
+<h1>pracownikxxx</h1>
+
+<div class="container my-4">
+    <p class="fw-bold">Prezentacja pracowników...</p>
+       <hr class="mt-5">
+       <a class="btn btn-primary me-2" href="http://localhost:4200/pracownik" target="_blank" role="button"> wszyscy pracownicy <i class="fas fa-download"></i></a>
+   </div>
+<div class=" bg-light border">
+    <div class="bg-danger border text-white fw-bold">{{ (employee$ | async).name }}</div> <br>
+    <img [src]="(employee$ | async).imageUrl" width="20%" height="20%"> <br><br>
+ </div>
+ <div class=" bg-light border">
+    <h2> {{ (employee$ | async).bio }} </h2> <br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ employee$ | async | json }}
