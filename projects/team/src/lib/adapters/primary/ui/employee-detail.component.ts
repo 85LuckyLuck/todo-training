@@ -1,5 +1,4 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { EmployeeDTO } from '../../../application/ports/secondary/employee.dto';
 import { GETS_ONE_EMPLOYEE_DTO, GetsOneEmployeeDtoPort } from '../../../application/ports/secondary/gets-one-employee.dto-port';
@@ -19,9 +18,11 @@ export class EmployeeDetailComponent {
   .pipe(switchMap((data: ContextDTO) => this._getsOneEmployeeDto.getOne(data.employeeId)));
 
   constructor(
-    private _activateRoute:ActivatedRoute,
+    
      @Inject(GETS_ONE_EMPLOYEE_DTO)
-      private _getsOneEmployeeDto: GetsOneEmployeeDtoPort, @Inject(CONTEXT_DTO_STORAGE) private _contextDtoStoragePort: ContextDtoStoragePort
+      private _getsOneEmployeeDto: GetsOneEmployeeDtoPort,
+       @Inject(CONTEXT_DTO_STORAGE) 
+      private _contextDtoStoragePort: ContextDtoStoragePort
       ) {} 
 }
 
