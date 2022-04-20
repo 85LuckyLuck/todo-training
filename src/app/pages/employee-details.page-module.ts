@@ -14,7 +14,6 @@ import { FirebaseEmployeesServiceModule } from '../../../projects/team/src/lib/a
       ]),
   EmployeeDetailComponentModule,
   FirebaseEmployeesServiceModule,
-  
 ],
   	declarations: [EmployeeDetailsPage],
   	providers: [],
